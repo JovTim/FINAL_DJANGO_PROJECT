@@ -20,7 +20,7 @@ class ProductList(ListView):
     model = Product
     context_object_name = 'product_list'
     template_name = 'product.html'
-    paginate_by = 6
+    paginate_by = 10
 
 class ProductCreateView(CreateView):
     model = Product
@@ -43,7 +43,7 @@ class SupplierList(ListView):
     model = Supplier
     context_object_name = 'supplier-list'
     template_name = 'supplier.html'
-    paginate_by = 6
+    paginate_by = 10
 
 class SupplierCreateView(CreateView):
     model = Supplier
@@ -66,7 +66,7 @@ class WarehouseList(ListView):
     model = Warehouse
     context_object_name = 'warehouse-list'
     template_name = 'warehouse.html'
-    paginate_by = 6
+    paginate_by = 10
 
 class WarehouseCreateView(CreateView):
     model = Warehouse
@@ -89,7 +89,7 @@ class OrderList(ListView):
     model = Order
     context_object_name = 'order-list'
     template_name = 'order.html'
-    paginate_by = 6
+    paginate_by = 10
 
 class OrderCreateView(CreateView):
     model = Order
@@ -114,7 +114,7 @@ class StockList(ListView):
     model = Stock
     context_object_name = 'stock-list'
     template_name = 'stock.html'
-    paginate_by = 6
+    paginate_by = 10
 
 class StockCreateView(CreateView):
     model = Stock

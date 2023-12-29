@@ -52,13 +52,13 @@
                   </tr>
                   <tr>
                       <th>Price:</th>
-                      <td>${{ product.price }}</td>
+                      <td>₱{{ product.price }}</td>
                   </tr>
                   <tr>
                     <th>Action: </th>
                     <td>
-                      <a href="product_list/{{ object.id }}" >Edit </a>|
-                      <a href="product_list/{{ object.id }}/delete" >Delete</a>
+                      <a href="{% url 'product-update' pk=product.pk %}">Edit</a> |
+                      <a href="{% url 'product-delete' pk=product.pk %}">Delete</a>
                     </td>
                 </tr>
               </table>
@@ -67,6 +67,9 @@
           <p>No products available</p>
           {% endfor %}
       </section>
+      <div>
+        {% include 'includes/pagination.html' %}
+        </div>
       {% endblock %}
   </main>
 

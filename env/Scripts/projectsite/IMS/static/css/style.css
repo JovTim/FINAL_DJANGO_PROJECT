@@ -194,7 +194,7 @@
   
   /* Alternate row background color */
   .styled-table tbody tr:nth-child(even) {
-    background-color: #34495e; /* Light red color for even rows */
+    background-color: #333638; /* Light red color for even rows */
     color: #ffffff;
   }
   
@@ -212,6 +212,7 @@
     display: flex; /* Use flexbox for centering */
     flex-wrap: wrap; /* Allow flex items to wrap */
     justify-content: center; /* Center flex items along the main axis */
+
   }
   
   .card-box {

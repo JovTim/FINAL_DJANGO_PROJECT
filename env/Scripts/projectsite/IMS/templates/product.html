@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <title>IMS | Products</title>
+  </head>
+  <body>
+    <!--NAVBAR-->
+    <section class="navbar">
+      <a href="{% url 'home' %}" class="btn"> Home </a>
+      <a href="{% url 'product-list' %}" class="btn"> Products </a>
+      <a href="{% url 'supplier-list' %}" class="btn"> Suppliers </a>
+      <a href="{% url 'warehouse-list' %}" class="btn"> Warehouse </a>
+      <a href="{% url 'order-list' %}" class="btn"> Orders </a>
+      <a href="{% url 'stock-list' %}" class="btn"> Stocks </a>
+    </section>
+
+    <!--CONTENT-->
+    <main>
+      {% block content %}
+      <a href="{% url 'product-add' %}" class="btn btn-outline-primary"> Add New Product</a><br>
+      <section class="cards-container">
+          {% for product in product_list %}
+          <div class="card-box">
+              {% if product.picture %}
+              <img src="{{ product.picture.url }}" alt="{{ product.name }} Image">
+              {% else %}
+              <p>No image available</p>
+              {% endif %}
+              <table class="product-table">
+                <tr>
+                  <th>ID Number:</th>
+                  <td>{{product.product_number}}</td>
+                </tr>
+                  <tr>
+                      <th>Name:</th>
+                      <td>{{ product.name }}</td>
+                  </tr>
+                  <tr>
+                      <th>Description:</th>
+                      <td>{{ product.description }}</td>
+                  </tr>
+                  <tr>
+                      <th>Price:</th>
+                      <td>${{ product.price }}</td>
+                  </tr>
+                  <tr>
+                    <th>Action: </th>
+                    <td>
+                      <a href="product_list/{{ object.id }}" >Edit </a>|
+                      <a href="product_list/{{ object.id }}/delete" >Delete</a>
+                    </td>
+                </tr>
+              </table>
+          </div>
+          {% empty %}
+          <p>No products available</p>
+          {% endfor %}
+      </section>
+      {% endblock %}
+  </main>
+
+    <footer>
+      <br />
+      <br />
+      <p>
+        Inventory Management System is a digital platform designed to <br />
+        efficiently track, organize, and manage various goods and products <br />
+        within a business or organization.  <br />
+      </p>
+      <br>
+      <div class="social-icons">
+        <a href="https://github.com/developer" target="_blank" class="icon-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://facebook.com/yourpage" target="_blank" class="icon-link">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com/youraccount" target="_blank" class="icon-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <!-- Add other social media icons similarly -->
+      </div>
+      <p>
+        &copy; 2023 Inventory Management System. All Rights Reserved.
+      </p>
+  </footer>
+  </body>
+</html>

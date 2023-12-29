@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Roboto Slab';
+  }
+  
+  main {
+    padding-top: 4.4%;
+    padding-bottom: 4.4%; /* Adjust as needed */
+  }
+  
+  /*NAVBAR*/
+  .navbar {
+    background-color: #f4f4f4;
+    border: 1px solid #a2a2a2;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+    overflow: hidden;
+    text-align: right;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar a {
+    margin: 5px;
+    float: none;
+    display: inline-block;
+    color: #34495e;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+  
+  /*FOOTER*/
+  footer {
+    /* position: fixed;
+    height: 20vh; */
+    width: 100%;
+    background-color: #f4f4f4;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+    color: #34495e;
+    bottom: 0;
+    text-align: center;
+  }
+  
+  /*MAIN*/
+  main {
+    min-height: 43vh;
+  }
+  
+  /*BUTTONS*/
+  main .add-btn {
+    margin-left: 10.8%;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: 2px solid #dddddd;
+  }
+  
+  main .add-btn:hover {
+    background-color: red;
+    color: white;
+    transition: 0.2s;
+  }
+  
+  main .edit-del-btn {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  main .edit-del-btn:hover {
+    text-decoration: underline;
+  }
+  
+  /*-----------------------------HOME_PAGE---------------------------------------*/
+  /*CONTENT*/
+  
+  
+  /*-----------------------------TRAINER_PAGE------------------------------------*/
+  /*TRAINERS*/
+  .trainers-container {
+    /* min-height: auto; */
+    border-collapse: collapse;
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  
+  .trainers-container table {
+    border-collapse: collapse;
+    background-color: white;
+    border: 2px solid #dddddd;
+  }
+  
+  .trainers-container th,
+  .trainers-container td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .trainers-container th {
+    background-color: white;
+  }
+  
+  .trainers-container td pre {
+    margin: 0;
+  }
+  
+  .trainers-container td b {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .trainers-container td b {
+    color: #000000;
+  }
+  
+  /*-----------------------------COLLECTION_PAGE---------------------------------*/
+  .collection-container {
+    /* min-height: auto; */
+    border-collapse: collapse;
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .collection-container table {
+    border-collapse: collapse;
+    background-color: white;
+    border: 2px solid #dddddd;
+  }
+  
+  .collection-container th,
+  .collection-container td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .collection-container th {
+    background-color: white;
+  }
+  
+  .collection-container td pre {
+    margin: 0;
+  }
+  
+  .collection-container td b {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .collection-container td b {
+    color: #000000;
+  }
+  
+  /* Style for trainer and collection table */
+  .styled-table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #ddd; /* Border for the table */
+  }
+  
+  /* Style for table headers */
+  .styled-table th {
+    background-color: #f2f2f2; /* Header background color */
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd; /* Border for the header cells */
+  }
+  
+  /* Style for table data cells */
+  .styled-table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd; /* Border for the data cells */
+  }
+  
+  /* Alternate row background color */
+  .styled-table tbody tr:nth-child(even) {
+    background-color: #34495e; /* Light red color for even rows */
+    color: #ffffff;
+  }
+  
+  /* Alternate row background color for odd rows (to maintain white color) */
+  .styled-table tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* White color for odd rows */
+    color: #34495e;
+  }
+  
+  /*-----------------------------POKEMON_CARD_PAGE-------------------------------*/
+  .cards-container {
+    width: 100%;
+    max-width: 1500px; /* Set a maximum width for better readability */
+    margin: 0 auto; /* Center the cards-container horizontally */
+    display: flex; /* Use flexbox for centering */
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    justify-content: center; /* Center flex items along the main axis */
+  }
+  
+  .card-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: calc(25% - 20px); /* Adjust width and subtract margin to maintain spacing */
+    box-sizing: border-box;
+    margin-right: 20px; /* Add right margin between card-boxes */
+    margin-left: 20px; /* Add left margin between card-boxes */
+    flex: 1 0 25%; /* Flex properties to maintain a 25% width */
+    max-width: calc(25% - 40px); /* Set a maximum width for better responsiveness */
+    min-width: calc(25% - 40px); /* Set a minimum width for better responsiveness */
+    box-sizing: border-box;
+  }
+  
+  .card-box:last-child {
+    margin-right: 0; /* Remove margin for the last card-box to prevent extra space */
+  }
+  
+  .card-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  
+  .card-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .card-box th,
+  .card-box td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .card-box th {
+    background-color: #f2f2f2;
+    width: 20%;
+  }
+  /*CARD TYPES*/
+  /*card background and border*/
+  .card-type,
+  #normal {
+    background-color: #fff5d2;
+    border: solid 10px #c0b89e;
+  }
+  
+  .card-type,
+  #fire {
+    background-color: #e6bfb3;
+    border: solid 10px #bb340e;
+  }
+  
+  .card-type,
+  #fighting {
+    background-color: #dda7a8;
+    border: solid 10px #881415;
+  }
+  
+  .card-type,
+  #water {
+    background-color: #b7c3e4;
+    border: solid 10px #3355b6;
+  }
+  
+  .card-type,
+  #flying {
+    background-color: #b0d3e4;
+    border: solid 10px #2e6a87;
+  }
+  
+  .card-type,
+  #grass {
+    background-color: #a8dfa7;
+    border: solid 10px #247123;
+  }
+  
+  .card-type,
+  #poison {
+    background-color: #e2b4e0;
+    border: solid 10px #6f006c;
+  }
+  
+  .card-type,
+  #electric {
+    background-color: #eadcb7;
+    border: solid 10px #c4a349;
+  }
+  
+  .card-type,
+  #ground {
+    background-color: #ddbba0;
+    border: solid 10px #6e380c;
+  }
+  
+  .card-type,
+  #psychic {
+    background-color: #e5b7d4;
+    border: solid 10px #a91074;
+  }
+  
+  .card-type,
+  #rock {
+    background-color: #e2d2a7;
+    border: solid 10px #876c27;
+  }
+  
+  .card-type,
+  #ice {
+    background-color: #bae6e0;
+    border: solid 10px #339085;
+  }
+  
+  .card-type,
+  #bug {
+    background-color: #d0e5b0;
+    border: solid 10px #445826;
+  }
+  
+  .card-type,
+  #dragon {
+    background-color: #bfb8ea;
+    border: solid 10px #3d327d;
+  }
+  
+  .card-type,
+  #ghost {
+    background-color: #c3bce3;
+    border: solid 10px #614dbc;
+  }
+  
+  .card-type,
+  #dark {
+    background-color: #e7bcb6;
+    border: solid 10px #3d1a15;
+  }
+  
+  .card-type,
+  #steel {
+    background-color: #bcd5ea;
+    border: solid 10px #2d5171;
+  }
+  
+  .card-type,
+  #fairy {
+    background-color: #eac3d8;
+    border: solid 10px #cd1179;
+  }
+  
+  /*image backgroung*/
+  .card-image,
+  #normal-img {
+    background: radial-gradient(circle, transparent, #c0b89e);
+  }
+  
+  .card-image,
+  #fire-img {
+    background: radial-gradient(circle, transparent, #bb340e);
+  }
+  
+  .card-image,
+  #fighting-img {
+    background: radial-gradient(circle, transparent, #881415);
+  }
+  
+  .card-image,
+  #water-img {
+    background: radial-gradient(circle, transparent, #3355b6);
+  }
+  
+  .card-image,
+  #flying-img {
+    background: radial-gradient(circle, transparent, #2e6a87);
+  }
+  
+  .card-image,
+  #grass-img {
+    background: radial-gradient(circle, transparent, #247123);
+  }
+  
+  .card-image,
+  #poison-img {
+    background: radial-gradient(circle, transparent, #6f006c);
+  }
+  
+  .card-image,
+  #electric-img {
+    background: radial-gradient(circle, transparent, #c4a349);
+  }
+  
+  .card-image,
+  #ground-img {
+    background: radial-gradient(circle, transparent, #6e380c);
+  }
+  
+  .card-image,
+  #psychic-img {
+    background: radial-gradient(circle, transparent, #a91074);
+  }
+  
+  .card-image,
+  #rock-img {
+    background: radial-gradient(circle, transparent, #876c27);
+  }
+  
+  .card-image,
+  #ice-img {
+    background: radial-gradient(circle, transparent, #339085);
+  }
+  
+  .card-image,
+  #bug-img {
+    background: radial-gradient(circle, transparent, #445826);
+  }
+  
+  .card-image,
+  #dragon-img {
+    background: radial-gradient(circle, transparent, #3d327d);
+  }
+  
+  .card-image,
+  #ghost-img {
+    background: radial-gradient(circle, transparent, #614dbc);
+  }
+  
+  .card-image,
+  #dark-img {
+    background: radial-gradient(circle, transparent, #3d1a15);
+  }
+  
+  .card-image,
+  #steel-img {
+    background: radial-gradient(circle, transparent, #2d5171);
+  }
+  
+  .card-image,
+  #fairy-img {
+    background: radial-gradient(circle, transparent, #cd1179);
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .page-item {
+    margin-right: 5px;
+  }
+  
+  .page-link {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #dee2e6;
+    color: #007bff;
+    background-color: #fff;
+  }
+  
+  .page-link:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Adjusted selectors to accommodate classes with spaces */
+  .page-item.disabled {
+    /* Styles for disabled pagination item */
+    color: #6c757d;
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #dee2e6;
+  }
+  
+  .page-item.active {
+    /* Styles for active pagination item */
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    z-index: 3;
+  }
+  
+  /* Social Icons for footer */
+  
+  .social-icons a {
+    color: #34495e;
+    text-decoration: none; 
+    /* Add other styling properties as needed */
+  }
+  
+  /* Hover effect for the links */
+  .social-icons a:hover {
+    color: #8093a5; /* Change color on hover if desired */
+    /* Add additional hover effects */
+  }
+  

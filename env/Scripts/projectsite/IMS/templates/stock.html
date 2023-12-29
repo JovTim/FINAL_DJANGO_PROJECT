@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <title>IMS | Stocks</title>
+  </head>
+  <body>
+    <!--NAVBAR-->
+    <section class="navbar">
+      <a href="{% url 'home' %}" class="btn"> Home </a>
+      <a href="{% url 'product-list' %}" class="btn"> Products </a>
+      <a href="{% url 'supplier-list' %}" class="btn"> Suppliers </a>
+      <a href="{% url 'warehouse-list' %}" class="btn"> Warehouse </a>
+      <a href="{% url 'order-list' %}" class="btn"> Orders </a>
+      <a href="{% url 'stock-list' %}" class="btn"> Stocks </a>
+    </section>
+
+    <!--CONTENT-->
+    <main>
+      {% block content %}
+      <a href="{% url 'stock-add' %}" class="btn btn-outline-primary"> Add New Stock</a><br>
+      <section class="trainers-container">
+        <table class="styled-table">
+          <tbody>
+            <tr>
+              <th>ID Number</th>
+              <th>Product</th>
+              <th>Warehouse</th>
+              <th>Quantity</th>
+              <th>Expiration Date</th>
+              <th>Actions</th>
+              </tr>
+      
+              {% for object in object_list %}
+              <tr>
+                  <td>{{ object.stock_number }}</td>
+                  <td>{{ object.product }}</td>
+                  <td>{{ object.warehouse }}</td>
+                  <td>{{ object.quantity }}</td>
+                  <td>{{object.expire_date}}</td>
+                  <td>
+                    <a href="stock_list/{{ object.id }}" >Edit </a>|
+                    <a href="stock_list/{{ object.id }}/delete" >Delete</a>
+                  </td>
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+      </section>
+      <div>
+        {% include 'includes/pagination.html' %}
+        </div>
+      {% endblock %}
+    </main>
+
+    <footer>
+      <br />
+      <br />
+      <p>
+        Inventory Management System is a digital platform designed to <br />
+        efficiently track, organize, and manage various goods and products <br />
+        within a business or organization.  <br />
+      </p>
+      <br>
+      <div class="social-icons">
+        <a href="https://github.com/developer" target="_blank" class="icon-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://facebook.com/yourpage" target="_blank" class="icon-link">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com/youraccount" target="_blank" class="icon-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <!-- Add other social media icons similarly -->
+      </div>
+      <p>
+        &copy; 2023 Inventory Management System. All Rights Reserved.
+      </p>
+  </footer>
+  </body>
+</html>

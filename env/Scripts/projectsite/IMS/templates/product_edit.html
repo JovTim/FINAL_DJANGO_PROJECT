@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+<section class="navbar">
+    <a href="{% url 'home' %}" class="btn"> Home </a>
+    <a href="{% url 'product-list' %}" class="btn"> Products </a>
+    <a href="{% url 'supplier-list' %}" class="btn"> Suppliers </a>
+    <a href="{% url 'warehouse-list' %}" class="btn"> Warehouse </a>
+    <a href="{% url 'order-list' %}" class="btn"> Orders </a>
+    <a href="{% url 'stock-list' %}" class="btn"> Stocks </a>
+  </section>
+{% block content %}
+<form role="form" class="" action="" method="post" novalidate>
+    {% csrf_token %}
+    {% include 'includes/forms.html' %}
+    
+    <br />
+    <div class="form-group">
+        <div class="col-md-12 col-sm-3">
+            <button type='submit' class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

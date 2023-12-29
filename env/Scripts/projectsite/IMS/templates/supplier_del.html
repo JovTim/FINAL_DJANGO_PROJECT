@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+<section class="navbar">
+    <a href="{% url 'home' %}" class="btn"> Home </a>
+    <a href="{% url 'product-list' %}" class="btn"> Products </a>
+    <a href="{% url 'supplier-list' %}" class="btn"> Suppliers </a>
+    <a href="{% url 'warehouse-list' %}" class="btn"> Warehouse </a>
+    <a href="{% url 'order-list' %}" class="btn"> Orders </a>
+    <a href="{% url 'stock-list' %}" class="btn"> Stocks </a>
+  </section>
+{% block content %}
+<div class="card-body ">
+<form method="post">
+{% csrf_token %}
+<div class="form-row ">
+<p>Are you sure you want to delete "{{ object }}"?</p>
+{% include 'includes/forms.html' %}
+</div>
+<input class="col-md-4 btn btn-primary" type="submit" value="Confirm">
+</form>
+</div>
+{% endblock %}

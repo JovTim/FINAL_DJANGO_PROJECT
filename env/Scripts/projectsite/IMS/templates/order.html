@@ -51,10 +51,17 @@
                   </td>
                   <td>{{object.order_date}}</td>
                   <td>{{object.payment}}</td>
-                  <td>{{object.status}}</td>
+                  <td class="{% if object.status == 'Pending' %} pending-status
+                  {% elif object.status == 'Processing' %} processing-status
+                  {% elif object.status == 'Shipped' %} shipped-status
+                  {% elif object.status == 'Recieved' %} recieved-status
+                  {% elif object.status == 'Cancelled' %} cancelled-status
+                  {% endif %}">
+                    {{ object.status }}
+                  </td>
                   <td>
-                    <a href="order_list/{{ object.id }}" >Edit </a>|
-                    <a href="order_list/{{ object.id }}/delete" >Delete</a>
+                    <a href="warehouse_list/{{ object.id }}" class="btn btn-edit">Edit </a><br><br>
+                    <a href="warehouse_list/{{ object.id }}/delete" class="btn btn-delete">Delete</a>
                   </td>
               </tr>
               {% endfor %}

@@ -21,7 +21,7 @@
 	-moz-border-radius: 5px;
 	border-radius: 5px;
     overflow: hidden;
-    text-align: right;
+    text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -37,6 +37,25 @@
     text-decoration: none;
     border-radius: 10px;
   }
+
+  h1 { color: #34495e; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 275px; 
+    font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1; 
+    text-align: center; 
+  }
+
+
+h2 { color: #34495e; 
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 30px; 
+  font-weight: 300; 
+  line-height: 32px; 
+  margin: 0 0 72px; 
+  text-align: center; 
+}
   
   /*FOOTER*/
   footer {
@@ -70,6 +89,43 @@
     border: 2px solid #dddddd;
   }
   
+  /* Style for Add New Product button */
+.btn.btn-outline-primary {
+  /* Add your unique styles for the Add New Product button here */
+  background-color: #007bff; /* Change to your desired color */
+  color: #fff; /* Text color */
+  border: 1px solid #007bff; /* Border color */
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: -10px;
+}
+
+/* Style for Edit button */
+.btn.btn-edit {
+  /* Add your unique styles for the Edit button here */
+  background-color: #28a745; /* Change to your desired color */
+  color: #fff; /* Text color */
+  padding: 3px 6px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+/* Style for Delete button */
+.btn.btn-delete {
+  /* Add your unique styles for the Delete button here */
+  background-color: #dc3545; /* Change to your desired color */
+  color: #fff; /* Text color */
+  padding: 3px 6px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+/* Additional styles for hover effect (optional) */
+.btn:hover {
+  /* Add your hover styles here */
+  opacity: 0.8;
+}
   main .add-btn:hover {
     background-color: red;
     color: white;
@@ -219,6 +275,7 @@
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
+    margin-top: 10px;
     text-align: center;
     width: calc(25% - 20px); /* Adjust width and subtract margin to maintain spacing */
     box-sizing: border-box;
@@ -261,205 +318,56 @@
   }
   /*CARD TYPES*/
   /*card background and border*/
-  .card-type,
-  #normal {
-    background-color: #fff5d2;
-    border: solid 10px #c0b89e;
-  }
+
+  .price {
+    color: green;
+}
+
+/* Define colors for different status */
+.pending-status {
+  background-color: rgb(248, 184, 66); /* Change this to your desired color for Pending status */
+  color: #fff; /* Text color */
+  padding: 3px 6px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.processing-status {
+  background-color: rgb(139, 139, 218); /* Change this to your desired color for Processing status */
+  color: #fff; /* Text color */
+  padding: 3px 6px;
+  text-decoration: none;
+  border-radius: 3px;
+
+}
+
+.shipped-status {
+  background-color: rgb(216, 209, 107); /* Change this to your desired color for Shipped status */
+  color: #fff; /* Text color */
+  padding: 3px 6px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.recieved-status {
+  background-color: #5cb85c; /* Change this to your desired color for Delivered status */
+  color: #fff; /* Text color */
+  padding: 3px 6px;
+  text-decoration: none;
+  border-radius: 3px;
   
-  .card-type,
-  #fire {
-    background-color: #e6bfb3;
-    border: solid 10px #bb340e;
-  }
-  
-  .card-type,
-  #fighting {
-    background-color: #dda7a8;
-    border: solid 10px #881415;
-  }
-  
-  .card-type,
-  #water {
-    background-color: #b7c3e4;
-    border: solid 10px #3355b6;
-  }
-  
-  .card-type,
-  #flying {
-    background-color: #b0d3e4;
-    border: solid 10px #2e6a87;
-  }
-  
-  .card-type,
-  #grass {
-    background-color: #a8dfa7;
-    border: solid 10px #247123;
-  }
-  
-  .card-type,
-  #poison {
-    background-color: #e2b4e0;
-    border: solid 10px #6f006c;
-  }
-  
-  .card-type,
-  #electric {
-    background-color: #eadcb7;
-    border: solid 10px #c4a349;
-  }
-  
-  .card-type,
-  #ground {
-    background-color: #ddbba0;
-    border: solid 10px #6e380c;
-  }
-  
-  .card-type,
-  #psychic {
-    background-color: #e5b7d4;
-    border: solid 10px #a91074;
-  }
-  
-  .card-type,
-  #rock {
-    background-color: #e2d2a7;
-    border: solid 10px #876c27;
-  }
-  
-  .card-type,
-  #ice {
-    background-color: #bae6e0;
-    border: solid 10px #339085;
-  }
-  
-  .card-type,
-  #bug {
-    background-color: #d0e5b0;
-    border: solid 10px #445826;
-  }
-  
-  .card-type,
-  #dragon {
-    background-color: #bfb8ea;
-    border: solid 10px #3d327d;
-  }
-  
-  .card-type,
-  #ghost {
-    background-color: #c3bce3;
-    border: solid 10px #614dbc;
-  }
-  
-  .card-type,
-  #dark {
-    background-color: #e7bcb6;
-    border: solid 10px #3d1a15;
-  }
-  
-  .card-type,
-  #steel {
-    background-color: #bcd5ea;
-    border: solid 10px #2d5171;
-  }
-  
-  .card-type,
-  #fairy {
-    background-color: #eac3d8;
-    border: solid 10px #cd1179;
-  }
-  
-  /*image backgroung*/
-  .card-image,
-  #normal-img {
-    background: radial-gradient(circle, transparent, #c0b89e);
-  }
-  
-  .card-image,
-  #fire-img {
-    background: radial-gradient(circle, transparent, #bb340e);
-  }
-  
-  .card-image,
-  #fighting-img {
-    background: radial-gradient(circle, transparent, #881415);
-  }
-  
-  .card-image,
-  #water-img {
-    background: radial-gradient(circle, transparent, #3355b6);
-  }
-  
-  .card-image,
-  #flying-img {
-    background: radial-gradient(circle, transparent, #2e6a87);
-  }
-  
-  .card-image,
-  #grass-img {
-    background: radial-gradient(circle, transparent, #247123);
-  }
-  
-  .card-image,
-  #poison-img {
-    background: radial-gradient(circle, transparent, #6f006c);
-  }
-  
-  .card-image,
-  #electric-img {
-    background: radial-gradient(circle, transparent, #c4a349);
-  }
-  
-  .card-image,
-  #ground-img {
-    background: radial-gradient(circle, transparent, #6e380c);
-  }
-  
-  .card-image,
-  #psychic-img {
-    background: radial-gradient(circle, transparent, #a91074);
-  }
-  
-  .card-image,
-  #rock-img {
-    background: radial-gradient(circle, transparent, #876c27);
-  }
-  
-  .card-image,
-  #ice-img {
-    background: radial-gradient(circle, transparent, #339085);
-  }
-  
-  .card-image,
-  #bug-img {
-    background: radial-gradient(circle, transparent, #445826);
-  }
-  
-  .card-image,
-  #dragon-img {
-    background: radial-gradient(circle, transparent, #3d327d);
-  }
-  
-  .card-image,
-  #ghost-img {
-    background: radial-gradient(circle, transparent, #614dbc);
-  }
-  
-  .card-image,
-  #dark-img {
-    background: radial-gradient(circle, transparent, #3d1a15);
-  }
-  
-  .card-image,
-  #steel-img {
-    background: radial-gradient(circle, transparent, #2d5171);
-  }
-  
-  .card-image,
-  #fairy-img {
-    background: radial-gradient(circle, transparent, #cd1179);
-  }
-  
+}
+
+.cancelled-status { /* Change this to your desired color for Cancelled status */
+  background-color: rgb(233, 96, 96); /* Change to your desired color */
+  color: #fff; /* Text color */
+  padding: 3px 6px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+
+
   /* Pagination */
   .pagination {
     display: flex;

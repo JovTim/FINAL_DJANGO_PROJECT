@@ -46,8 +46,8 @@
                   <td>{{ object.contact_no }}</td>
                   <td>{{ object.supplies }}</td>
                   <td>
-                    <a href="supplier_list/{{ object.id }}" >Edit </a>|
-                    <a href="supplier_list/{{ object.id }}/delete" >Delete</a>
+                    <a href="warehouse_list/{{ object.id }}" class="btn btn-edit">Edit </a><br><br>
+                    <a href="warehouse_list/{{ object.id }}/delete" class="btn btn-delete">Delete</a>
                   </td>
               </tr>
               {% endfor %}
